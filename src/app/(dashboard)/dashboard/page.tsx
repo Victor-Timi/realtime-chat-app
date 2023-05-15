@@ -1,13 +1,10 @@
-import { FunctionComponent } from "react";
+import { authOptions } from "@/lib/auth";
+import { db } from "@/lib/db";
+import { getServerSession } from "next-auth";
 
-interface pageProps {
-    
+const page = async ({}) => {
+    const session = await getServerSession(authOptions)
+    return <pre>{JSON.stringify(session)}</pre>
 }
- 
-const page: FunctionComponent<pageProps> = () => {
-    return ( 
-    <>
-    </> );
-}
- 
-export default page;
+
+export default page
