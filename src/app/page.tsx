@@ -1,10 +1,10 @@
-import Button from "@/components/ui/Button";
-import { db } from "@/lib/db";
+import Button from '@/components/ui/Button'
+import Image from 'next/image'
 
-export default async function Home() {
-  
+export default function Home() {
   return (
-    <Button>Hello Papa</Button>
-      )
+    <Button className="">
+      Hello World
+    </Button>
+  )
 }
- 

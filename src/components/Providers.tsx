@@ -1,16 +1,18 @@
-"use client"
+'use client'
 
-import { FunctionComponent, ReactNode } from "react";
-import { Toaster } from 'react-hot-toast'
+import {FunctionComponent, ReactNode} from 'react'
+import { Toaster } from 'react-hot-toast';
 interface ProvidersProps {
-   children: ReactNode 
+    children: ReactNode
 }
  
 const Providers: FunctionComponent<ProvidersProps> = ({children}) => {
-    return ( <>
+    return ( 
+    <>
     <Toaster position='top-center' reverseOrder={false} />
     {children}
-    </> );
+    </>
+     );
 }
  
 export default Providers;
